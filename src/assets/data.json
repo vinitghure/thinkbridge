@@ -1,0 +1,110 @@
+[
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb3d",
+        "name": "Flower",
+        "description": "Flower description",
+        "pricePerUnit": 10.00,
+        "category": "Vegetables",
+        "unitOfMeasurement": "kg",
+        "quantity": 10
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb7d",
+        "name": "Kaju",
+        "description": "Kaju description",
+        "pricePerUnit": 20.00,
+        "category": "Nuts",
+        "unitOfMeasurement": "pound",
+        "quantity": 5
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+        "name": "Milk",
+        "description": "Milk description",
+        "pricePerUnit": 30.00,
+        "category": "Liquid",
+        "unitOfMeasurement": "liters",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb67",
+        "name": "water",
+        "description": "water description",
+        "pricePerUnit": 20.00,
+        "category": "Liquid",
+        "unitOfMeasurement": "liters",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcbqw",
+        "name": "Orange Juice",
+        "description": "Orange Juice",
+        "pricePerUnit": 30.00,
+        "category": "Liquid",
+        "unitOfMeasurement": "liters",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dc98u",
+        "name": "Apple Juice",
+        "description": "Apple Juice",
+        "pricePerUnit": 30.00,
+        "category": "Liquid",
+        "unitOfMeasurement": "liters",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dinfr",
+        "name": "Coconut Water",
+        "description": "Coconut Water",
+        "pricePerUnit": 25.00,
+        "category": "Liquid",
+        "unitOfMeasurement": "liters",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcoi",
+        "name": "Oranges",
+        "description": "Oranges",
+        "pricePerUnit": 30.00,
+        "category": "Fruit",
+        "unitOfMeasurement": "kg",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dljrc",
+        "name": "Apple",
+        "description": "Apple",
+        "pricePerUnit": 30.00,
+        "category": "Fruit",
+        "unitOfMeasurement": "kg",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3987mr",
+        "name": "Onions",
+        "description": "Onions",
+        "pricePerUnit": 30.00,
+        "category": "vegetables",
+        "unitOfMeasurement": "kg",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-7896-9bdd-2b0d7b3dcb6d",
+        "name": "Tomatos",
+        "description": "Tomatos",
+        "pricePerUnit": 30.00,
+        "category": "vegetables",
+        "unitOfMeasurement": "kg",
+        "quantity": 20
+    },
+    {
+        "id": "9b1deb4d-3b7d-ujds-9bdd-2b0d7b3dcb6d",
+        "name": "Lemons",
+        "description": "Lemons",
+        "pricePerUnit": 30.00,
+        "category": "Vegetables",
+        "unitOfMeasurement": "kg",
+        "quantity": 20
+    }
+]

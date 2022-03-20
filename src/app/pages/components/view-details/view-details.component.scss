@@ -1,0 +1,31 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.card {
+    height: calc(100% - 30px);
+}
+
+.tableFixHead {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+}
+
+th[sortable].asc:after, th[sortable].desc:after {
+    display: inline-block;
+    content: " ▲";
+}
+
+th[sortable].desc:after, th[sortable].desc:after {
+    display: inline-block;
+    content: " ▼";
+}
+
+::ng-deep .mat-checkbox-inner-container{
+    background-color:  #FFFFFF;
+}

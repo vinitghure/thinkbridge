@@ -1,0 +1,43 @@
+<h2 mat-dialog-title class="text-center">
+    {{ headerText }} Details
+</h2>
+<mat-dialog-content>
+    <form [formGroup]="detailsForm">
+        <div class="row">
+            <mat-form-field class="col-md-4 col-lg-3">
+                <input matInput placeholder="Name" formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field class="col-md-8 col-lg-3">
+                <input matInput placeholder="Description" formControlName="description" required>
+            </mat-form-field>
+            <mat-form-field class="col-md-4 col-lg-3">
+                <mat-select matInput placeholder="Category" formControlName="category" required>
+                    <mat-option value="Vegetables">Vegetables</mat-option>
+                    <mat-option value="Fruit">Fruit</mat-option>
+                    <mat-option value="Nuts">Nuts</mat-option>
+                    <mat-option value="Meat">Meat</mat-option>
+                    <mat-option value="Liquid">Liquid</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-md-4 col-lg-3">
+                <mat-select matInput placeholder="Unit Of Measurement" formControlName="unitOfMeasurement" required>
+                    <mat-option value="kg">kg</mat-option>
+                    <mat-option value="pound">pound</mat-option>
+                    <mat-option value="liters">liters</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-md-4 col-lg-3">
+                <input type="number" matInput placeholder="Quantity" formControlName="quantity" required>
+            </mat-form-field>
+            <mat-form-field class="col-md-4 col-lg-3">
+                <input type="number" matInput placeholder="Price per Unit" formControlName="pricePerUnit" required>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="row">
+    <div class="col-md-12 text-right">
+        <button mat-button class="mat-raised-button" (click)="closeDialog()">Close</button>
+        <button mat-button class="mat-raised-button mat-primary" (click)="saveDetails()">Save</button>
+    </div>
+</mat-dialog-actions>

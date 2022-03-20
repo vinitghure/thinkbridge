@@ -1,0 +1,89 @@
+<div class="card row m-2">
+    <div class="col-12 p-2">
+        <div class="row px-5 mt-2">
+            <div class="col-md-6 text-left mt-2">
+                <button mat-button class="mat-raised-button mat-primary mx-1" (click)="openAddEditDetailsDialog()">Add
+                    Record</button>
+                <button mat-button class="mat-raised-button mat-warn mx-1" (click)="deleteDetails()">Delete
+                    Selected</button>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="col-12">
+                    <input matInput placeholder="Search" [(ngModel)]="searchString">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="table-responsive mt-2 col-12 tableFixHead">
+            <table class="table table-bordered table-hover table-sm">
+                <thead class="cursor-pointer">
+                    <tr>
+                        <th class="align-middle bg-secondary text-white">
+                            <mat-checkbox (change)="checkAllData()" [(ngModel)]="checkAll"></mat-checkbox>
+                        </th>
+                        <th sortable="name" (sort)="onSort($event)" class="align-middle bg-secondary text-white">
+                            Name
+                        </th>
+                        <th sortable="description" (sort)="onSort($event)" class="align-middle bg-secondary text-white">
+                            Description
+                        </th>
+                        <th sortable="category" (sort)="onSort($event)" class="align-middle bg-secondary text-white">
+                            Category
+                        </th>
+                        <th sortable="unitOfMeasurement" (sort)="onSort($event)"
+                            class="align-middle bg-secondary text-white">
+                            Unit Of Measurement
+                        </th>
+                        <th sortable="quantity" (sort)="onSort($event)" class="align-middle bg-secondary text-white">
+                            Quantity
+                        </th>
+                        <th sortable="pricePerUnit" (sort)="onSort($event)"
+                            class="align-middle bg-secondary text-white">
+                            Price per Unit
+                        </th>
+                        <th sortable="totalPrice" (sort)="onSort($event)" class="align-middle bg-secondary text-white">
+                            total Price
+                        </th>
+                        <th class="align-middle bg-secondary text-white">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="thead-light">
+                    <tr *ngIf="!details">
+                        <td colspan="12">
+                            <ngx-skeleton-loader count="5" appearance="line" [theme]="{  height: '20px' }">
+                            </ngx-skeleton-loader>
+                        </td>
+                    </tr>
+                    <tr
+                        *ngFor="let item of details | filter : searchString | slice: pageIndex * pageSize : (pageIndex + 1) * pageSize">
+                        <td>
+                            <mat-checkbox [(ngModel)]="item.checked" (change)="onItemChecked()"></mat-checkbox>
+                        </td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{item.unitOfMeasurement}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.pricePerUnit | currency}}</td>
+                        <td>{{item?.totalPrice | currency}}</td>
+                        <td>
+                            <button class="btn btn-link btn-sm d-inline" (click)="openAddEditDetailsDialog(item, true)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button class="btn btn-link btn-sm d-inline text-danger" (click)="deleteDetails(item)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row" *ngIf="details">
+            <div class="col-12">
+                <mat-paginator [length]="details.length" [pageSizeOptions]="[5, 10, 50, 100]" [pageIndex]="pageIndex"
+                    (page)="handlePageEvent($event)" [showFirstLastButtons]="showFirstLastButtons"
+                    [pageSize]="pageSize">
+                </mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>
